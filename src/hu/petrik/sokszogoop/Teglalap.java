@@ -17,10 +17,15 @@ public class Teglalap extends Sokszog {
     }
 
     public double getKerulet() {
-        return 2 * (getA() + b);
+        return 2 * (this.getA() + this.b);
     }
 
     public double getTerulet() {
-        return getA() * b;
+        return this.getA() * this.b;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Téglalap: a=%f b=%f K=%f T%f", this.getA(), this.b, this.getKerulet(), this.getTerulet());
     }
 }
