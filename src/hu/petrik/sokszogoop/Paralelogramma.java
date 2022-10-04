@@ -30,7 +30,7 @@ public class Paralelogramma extends Sokszog {
     }
     @Override
     public double getTerulet() {
-        return getA() * this.b * Math.sin(this.alfa);
+        return getA() * this.b * Math.sin(Math.toRadians(this.alfa));
     }
 
     @Override
