@@ -4,11 +4,27 @@ public class Haromszog extends Sokszog {
     private double b;
     private double c;
 
+    public Haromszog() {
+        super(getVeletlenOldal());
+        this.b = getVeletlenOldal();
+        this.c = getVeletlenOldal();
+        while(!isSzerkesztheto()){
+            super.setA(getVeletlenOldal());
+            this.b = getVeletlenOldal();
+            this.c = getVeletlenOldal();
+        }
+    }
+
+    private static double getVeletlenOldal() {
+        // Random (*) menyit és (+) honnan
+        return Math.random() * 10 + 5;
+    }
+
     public Haromszog(double a, double b, double c) {
         super(a);
         this.b = b;
         this.c = c;
-        if (!this.isSzerkesztheto()){
+        if (!this.isSzerkesztheto()) {
             throw new IllegalArgumentException("A háromszog nem szerkeszthető.");
         }
     }
@@ -19,7 +35,7 @@ public class Haromszog extends Sokszog {
 
     public void setB(double b) {
         this.b = b;
-        if (!this.isSzerkesztheto()){
+        if (!this.isSzerkesztheto()) {
             throw new IllegalArgumentException("A háromszog nem szerkeszthető.");
         }
     }
@@ -30,7 +46,7 @@ public class Haromszog extends Sokszog {
 
     public void setC(double c) {
         this.c = c;
-        if (!this.isSzerkesztheto()){
+        if (!this.isSzerkesztheto()) {
             throw new IllegalArgumentException("A háromszog nem szerkeszthető.");
         }
     }
@@ -38,7 +54,7 @@ public class Haromszog extends Sokszog {
     @Override
     public void setA(double a) {
         super.setA(a);
-        if (!this.isSzerkesztheto()){
+        if (!this.isSzerkesztheto()) {
             throw new IllegalArgumentException("A háromszog nem szerkeszthető.");
         }
     }
@@ -68,6 +84,6 @@ public class Haromszog extends Sokszog {
 
     @Override
     public String toString() {
-        return String.format("Háromszög: a=%f b=%f c=%f K=%f T=%f ",this.getA(), this.getB(),this.getC(), this.getKerulet(), this,getTerulet());
+        return String.format("Háromszög: a=%f b=%f c=%f K=%f T=%f ", this.getA(), this.getB(), this.getC(), this.getKerulet(), this, getTerulet());
     }
 }
