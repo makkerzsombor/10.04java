@@ -17,5 +17,11 @@ public class Main {
             double alfa = Math.random() * 178 + 1;
             System.out.println(new Paralelogramma(a, b, alfa));
         }
+        for (int i = 0; i < 2; i++) {
+            double atlo = 0;
+            double a = Math.random() * 10 + 5;
+            atlo = a * Math.sqrt(2);
+            System.out.println(new Negyzet(a, atlo));
+        }
     }
 }

@@ -25,6 +25,7 @@ public class Paralelogramma extends Sokszog {
         this.alfa = alfa;
     }
 
+    @Override
     public double getKerulet() {
         return 2 * (getA() + this.b);
     }
