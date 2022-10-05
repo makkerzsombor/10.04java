@@ -23,5 +23,6 @@ public class Main {
             atlo = a * Math.sqrt(2);
             System.out.println(new Negyzet(a, atlo));
         }
+        System.out.println(new Sokszogek().kiir());
     }
 }
