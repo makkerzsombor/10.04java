@@ -3,7 +3,7 @@ package hu.petrik.sokszogoop;
 import java.util.ArrayList;
 
 public class Sokszogek {
-    private static ArrayList<Sokszog> sokszogek;
+    private static ArrayList<Sokszog> sokszogek = new ArrayList<>();
 
     public Sokszogek() {
         int rnd = (int)(Math.random() * 4) + 1;
@@ -44,8 +44,10 @@ public class Sokszogek {
         return terulet;
     }
 
-    public String kiir(){
-        return String.format("A lista elem: %s", sokszogek.get(0));
+    public String kiir(int i){
+        i++;
+        return String.format("A lista elem: %s\n", sokszogek.get(i-1));
+
     }
 
     @Override
