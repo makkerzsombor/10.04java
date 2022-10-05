@@ -1,5 +1,7 @@
 package hu.petrik.sokszogoop;
 
+import java.sql.SQLOutput;
+
 public class Main {
     public static void main(String[] args) {
         for (int i = 0; i < 100; i++) {
@@ -26,5 +28,6 @@ public class Main {
         for (int i = 0; i < 4; i++) {
             System.out.println(new Sokszogek().kiir(i));
         }
+        System.out.println(Sokszogek.sokszogAdatok());
     }
 }
